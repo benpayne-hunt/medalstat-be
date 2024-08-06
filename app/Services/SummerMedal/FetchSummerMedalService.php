@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Services\SummerMedal;
 
-use App\Models\SummerMedal;
 use App\Repositories\SummerMedalRepository;
 
 class FetchSummerMedalService
@@ -16,7 +15,7 @@ class FetchSummerMedalService
         $this->summerMedalRepository = $summerMedalRepository;
     }
 
-    public function fetchSummerMedals(): SummerMedal
+    public function fetchSummerMedals(): array
     {
         return $this->summerMedalRepository->fetchSummerMedals();
     }

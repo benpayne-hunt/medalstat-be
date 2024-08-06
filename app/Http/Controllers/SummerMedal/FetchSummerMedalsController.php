@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\SummerMedal;
 
-use App\Services\FetchSummerMedalService;
+use App\Services\SummerMedal\FetchSummerMedalService;
 use Illuminate\Http\JsonResponse;
 
 class FetchSummerMedalsController
@@ -16,8 +16,9 @@ class FetchSummerMedalsController
         $this->fetchSummerMedalService = $fetchSummerMedalService;
     }
 
-    public function __invoke(): JsonResponse
+    public function fetchAllSummerMedals(): JsonResponse
     {
-        return response()->json($this->fetchSummerMedalService->fetchSummerMedals());
+        $summerMedals = $this->fetchSummerMedalService->fetchSummerMedals();
+        return response()->json($summerMedals);
     }
 }

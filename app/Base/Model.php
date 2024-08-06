@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Base;
 
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\ValidationException;
 use MongoDB\Laravel\Eloquent\Model as BaseModel;
 use Exception;
 

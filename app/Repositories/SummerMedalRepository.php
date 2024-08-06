@@ -14,10 +14,9 @@ class SummerMedalRepository extends Repository
         parent::__construct(SummerMedal::class);
     }
 
-    public function fetchSummerMedals(): SummerMedal
+    public function fetchSummerMedals(): array
     {
-        /** @var SummerMedal */
-        return $this->createQueryBuilder()->all();
+        return $this->createQueryBuilder()->get()->toArray();
     }
 
     public function fetchSummerMedalsBy(string $column, string $value): array

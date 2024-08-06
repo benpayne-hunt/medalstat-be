@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\SummerMedal;
 
-use App\Services\FetchSummerMedalService;
 use App\Http\Requests\SummerMedal\FetchSummerMedalByRequest;
+use App\Services\SummerMedal\FetchSummerMedalService;
 use Illuminate\Http\JsonResponse;
 
 class FetchSummerMedalController

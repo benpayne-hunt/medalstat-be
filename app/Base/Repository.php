@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Base;
 
-use App\Base\Contracts\Repository as RepositoryInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use MongoDB\BSON\ObjectId;
